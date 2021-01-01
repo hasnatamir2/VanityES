@@ -15,8 +15,18 @@ body{
     list-style: none;
     background-color: #080325cc;
     margin: 0;
-    padding: 1rem;
-    padding-left: 5%;
+    padding: 0;
+    /* padding-left: 5%; */
+}
+
+.logo{
+    width: 100px;
+    padding: 0;
+}
+
+.navbar-nav{
+    float: right;
+    bottom: 0;
 }
 
 .nav-item{
@@ -27,6 +37,16 @@ body{
     color: rgba(255, 255, 255);
     border-radius: 5%;
     padding: 5px;
+}
+
+.nav-item-sm{
+    text-decoration: none;
+    color: inherit;
+}
+
+.toggle-button{
+    float: left;
+    margin: 0;
 }
 
 .nav-icons{
@@ -52,6 +72,8 @@ body{
 .nav-item:hover .nav-links{
     color: rgba(255, 255, 255, 0.5);
 }
+
+
 /* 
 
 */
@@ -104,9 +126,20 @@ body{
 
 .button:hover{
     background-position: 0 100%;
+    cursor: pointer;
     /* background-color: #080326cc; */
 }
 
+@media only screen and (max-width: 600px) {
+    .game-title{
+        font-size: 2rem;
+    }
+    .game-subtitle{
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+}
 /* 
 game info
 */
@@ -124,15 +157,17 @@ game info
     text-align: center;
     color: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+    .heading{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
 /* 
 Why Us? 
 */
 .whyUs{
-    /* background-image: url('../public/images.png');
-    background-attachment: fixed;
-    background-position: 5%;
-    background-repeat: no-repeat;
-    background-size: cover; */
     min-height: 500px;
     background-color: #080325;
     /* filter: blur(3); */
@@ -187,17 +222,26 @@ Why Us?
     color: #adff2f;
     border-color: #adff2f;
 }
+@media only screen and (max-width: 600px) {
+    .heading{
+        font-size: 2rem;
+        padding: 0rem;
+    }
+
+}
 /* 
 character array
 */
 
 .character-tile{
     background-color: #3b26b1;
-    border: none;
+    /* border: 1px solid black; */
+    /* margin: 2px 3px; */
     width: 100%;
     overflow: hidden;
     text-align: center;
-    display: inline-block;
+    position: relative;
+    /* display: inline-block; */
     vertical-align: middle;
 }
 
@@ -219,6 +263,7 @@ character array
     height: 100%;
     width: 100%;
     opacity: 0;
+    letter-spacing: 0.5px;
     transition: 0.1s all ease-in;
 }
 
@@ -249,12 +294,31 @@ character array
     opacity: 1;
 }
 
+@media only screen and (max-width: 600px) {
+    .character-details h3{
+
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    .character-details h5{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .character-details p{
+        font-size: 0.6rem;
+        font-weight: 300;
+        margin: 0rem;
+    }
+}
 /* 
 participate
 */
 
 .gameInfo{
  background-color: #080325;
+ padding: 4px;
 }
 
 .participate{
@@ -289,6 +353,22 @@ participate
     margin: 0.5rem;
 }
 
+@media only screen and (max-width: 600px) {
+    .participate{
+        font-size: 1rem;
+        padding: 0;
+    }
+    .participate h4{
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+
+    #timer{
+        font-size: 1.7rem;
+        /* color: rgba(0, 0, 0, 0.5); */
+    }
+}
 /* 
 social contact
 */
@@ -361,9 +441,47 @@ social contact
     border: 1px solid #00acee;
 }
 
+@media only screen and (max-width: 600px) {
+    .social-media .heading{
+        font-size: 1.5rem;
+    }
+
+    .social-contact{
+        width: 75%;
+    }
+}
 /* .social-contact:hover  h5{
     color: #4267B2;
 } */
+
+
+/* 
+Participation form
+*/
+.alert{
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    color: #611a15;
+    background-color: #ff000050;
+    border: 1px solid #ff0000;
+}
+
+.complete{
+    font-size: 3rem;
+    /* padding: 0.5rem; */
+    border-radius: 50%;
+    width: 30%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    /* display: inline-block; */
+    color: #4caf50;
+    background-color: #4caf4f50;
+    border: 1px solid #4caf50;
+}
 
 /* 
 footer

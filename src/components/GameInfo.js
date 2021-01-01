@@ -1,4 +1,9 @@
 import React from 'react'
+import {
+  Dialog,
+  DialogTitle,
+} from '@material-ui/core';
+import ParticipationForm from './ParticipationForm'
 import './style.css'
 import CharacterArray from './characterArray/CharacterArray' 
 
@@ -34,18 +39,32 @@ import CharacterArray from './characterArray/CharacterArray'
   
 function GameInfo(props) {
 
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+
     return (
-        <div className="gameInfo" id="gameInfo">
+        <div className="gameInfo" id="game">
         <h3 className="heading">Know the Agents</h3>
           <CharacterArray/>
-          <div className="participate">
+          <div className="participate" id="participate">
             <h4 className="">
               VALORANT
             </h4>
               A 5v5 character-based tactical shooter
             <p id="timer">{setTimeout}</p>
-            <button className="button">participate</button>
+            <button className="button" onClick={handleClickOpen} >participate</button>
           </div>
+          <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+            <DialogTitle id="form-dialog-title">Participate</DialogTitle>
+              <ParticipationForm/>
+          </Dialog>
         </div>
     )
 }
